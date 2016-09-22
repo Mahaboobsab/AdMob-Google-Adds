@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fxA-T3-OhZ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PCM-FH-x57" customClass="GADBannerView">
+                                <rect key="frame" x="125" y="530" width="350" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="Io9-Cq-E8h"/>
+                                    <constraint firstAttribute="height" constant="50" id="LMf-XL-2VW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PCM-FH-x57" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4vz-fi-OTo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PCM-FH-x57" secondAttribute="bottom" constant="20" id="df9-n6-5O0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="73h-oQ-u3L">
+                        <barButtonItem key="rightBarButtonItem" title="interstitial ads " id="cQg-3P-XTZ">
+                            <connections>
+                                <action selector="interstitialAds:" destination="BYZ-38-t0r" id="fOn-Pe-PBg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bannerView" destination="PCM-FH-x57" id="plR-fm-txK"/>
+                        <segue destination="Lmo-Uc-uBT" kind="show" identifier="next" id="Ehl-6k-IfO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1059" y="137"/>
+        </scene>
+        <!--Interstitial Ads-->
+        <scene sceneID="t6V-f0-Ll6">
+            <objects>
+                <viewController id="Lmo-Uc-uBT" customClass="InterstitialAds" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1cm-6o-dFJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Qo-ZJ-sqR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2RX-nG-MZz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OGf-OL-8GH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1734" y="158"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gQJ-x1-8d1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fxA-T3-OhZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Moi-fr-2Sy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2Uq-9M-M3o"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5mA-78-pRD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-398" y="46"/>
+        </scene>
+    </scenes>
+</document>
